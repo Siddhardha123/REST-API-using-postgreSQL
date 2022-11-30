@@ -1,5 +1,6 @@
-const pool = require('../db');
-const queries = require('./queries')
+import pool from '../db.js'
+import queries from './queries.js'
+import controller from './controller.js';
 
 
 const getStudents = (req,res) =>{
@@ -50,8 +51,7 @@ const deleteByID = (req,res) =>{
         console.log(error)
     }
 }
-
-module.exports = {
+export default {
     getStudents,
     getStudentByID,
     addStudent,

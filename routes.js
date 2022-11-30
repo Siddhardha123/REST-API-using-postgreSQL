@@ -1,11 +1,11 @@
-const controller = require('./api/controller')
+import controller from './api/controller.js';
 
-
-const {Router} = require('express');
+import { Router } from 'express';
 const router = Router();
 
 router.get('/',controller.getStudents)
 router.get('/:id',controller.getStudentByID)
 router.post('/addstudent',controller.addStudent)
 router.delete('/delstudent/:id',controller.deleteByID)
-module.exports = router
+
+export default  router;
